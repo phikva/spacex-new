@@ -1,5 +1,10 @@
 import heroImg from "../images/pexels-spacex-23769.jpg"
 import Image from "next/image";
+import CompanyInfo from "../components/CompanyInfo";
+import NextLaunch from "../components/NextLaunch";
+import LatestLaunch from "../components/LatestLaunch";
+
+
 
 export default function Home() {
   return (
@@ -16,9 +21,15 @@ export default function Home() {
           <button>Learn more</button>
         </div>
       </div>
-      <section className="container company-info"></section>
-        <section className="container next-launch"></section>
-        <section className="container recent-launch"></section>
+      <section className="container company-info">
+      <CompanyInfo />
+      </section>
+        <section className="container upcoming-launch">
+          <NextLaunch />
+        </section>
+        <section className="container latest-launch">
+          <LatestLaunch />
+        </section>
         <section className="container recent-mission"></section>
         <section className="container recent-mission"></section>
     </div>
