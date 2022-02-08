@@ -24,48 +24,49 @@ function CompanyInfo() {
         <h2>Company Info</h2>
       </div>
       <div className="row">
-      <div className="cols">
-        <h2>Name: {data.name}</h2>
-        <h2>Ceo: {data.ceo}</h2>
-        </div>
+      <span>
+        <h3>Name: {data.name}</h3>
+        <h3>Ceo: {data.ceo}</h3>
+        </span>
       </div>
       <div className="row">
-      <div className="cols">
+      <span>
         <h3>Employees: {data.employees}</h3>
         <h3>Founded: {data.founded}</h3>
-        </div>
+        <h3>Valuation: ${data.valuation.toLocaleString()}</h3>
+        </span>
       </div>
       <div className="row">
-      <div className="cols">
+      <span>
         <p>{data.summary}</p>
-        </div>
+        </span>
       </div>
       <div className="row">
-        <div className="cols">
+        <span>
           <a href="https://twitter.com/elonmusk">
             <FontAwesomeIcon size="2x" icon={faTwitter} Link />
             {data.links.elon_twitter}
           </a>
-        </div>
-        <div className="cols">
+        </span>
+        <span>
           <a href="https://twitter.com/SpaceX">
             <FontAwesomeIcon size="2x" icon={faTwitter} Link />
             {data.links.twitter}
           </a>
-        </div>
-        <div className="cols">
+        </span>
+        <span>
           <a href="https://twitter.com/SpaceX">
             <FontAwesomeIcon size="2x" icon={faFlickr} Link />
             {data.links.flickr}
           </a>
-        </div>
+        </span>
 
-        <div className="cols">
+        <span>
           <a href="https://twitter.com/SpaceX">
             <FontAwesomeIcon size="2x" icon={faChrome} Link />
             {data.links.website}
           </a>
-        </div>
+        </span>
       </div>
     </div>
   );

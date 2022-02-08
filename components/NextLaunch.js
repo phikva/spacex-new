@@ -25,15 +25,24 @@ function NextLaunch() {
         launch.details ? (
           <div key={launch.id} className="row">
              <div className="card__content"> 
-             <h2>Name: {launch.name}</h2>
-            <p>{launch.details}</p>
+             <div className="title"> 
+             <h3>Name: {launch.name}</h3>
+             </div>
+             <div className="text">
+             <p>{launch.details}</p>
+             </div>
+          
              </div>
           </div>
         ) : (
             <div key={launch.id} className="row">
                 <div className="card__content">
-                <h2>Name: {launch.name}</h2>
+                <div className="title"> 
+                <h3>Name: {launch.name}</h3>
+                </div>
+                <div className="text">
               <p>No details available for this launch</p>
+              </div>
                     </div>
             </div>
           )

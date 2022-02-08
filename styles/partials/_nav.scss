@@ -1,0 +1,47 @@
+
+
+header {
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   background-color: rgb(255, 255, 255);
+   z-index: 999;
+}
+.hamburger {
+   padding-right: 1em;
+   padding-top: 0.5em;
+   position: absolute;
+}
+.container__logo {
+   display: flex;
+   justify-content: center;
+   padding-top: .25em;
+}
+.nav__content{
+   display: flex;
+   justify-content: flex-end;
+}
+
+.close {
+   position: relative;
+   right: 0;
+   left: 85%;
+   top: 1.7em;
+}
+.menu-show {
+   background-color: black;
+   color: white;
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   ul {
+      display: flex;
+      flex-flow: column wrap;
+      li {
+         padding: .5em;
+         a {
+            font-size: 1.5rem;
+         }
+      }
+   }
+}

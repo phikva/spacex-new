@@ -1,4 +1,4 @@
-import heroImg from "../images/pexels-spacex-23769.jpg"
+import heroImg from "../images/pexels-spacex-23769-min.jpg"
 import Image from "next/image";
 import CompanyInfo from "../components/CompanyInfo";
 import NextLaunch from "../components/NextLaunch";
@@ -30,8 +30,8 @@ export default function Home() {
         <section className="container latest-launch">
           <LatestLaunch />
         </section>
-        <section className="container recent-mission"></section>
-        <section className="container recent-mission"></section>
+        
+        
     </div>
   );
 }

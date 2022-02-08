@@ -22,10 +22,17 @@ function LatestLaunch() {
       </div>
       <div className="row">
         <div className="card__content">
-          <h2>Name: {data.name}</h2>
+        <div className="title"> 
+        <h3>Name: {data.name}</h3>
+        </div>
+         
+          <div className='player-wrapper'>
           <ReactPlayer url={video} 
+          width="100%"
+          height="auto"
           controls="true"
           />
+          </div>
         </div>
       </div>
     </div>
