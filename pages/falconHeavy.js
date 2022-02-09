@@ -12,8 +12,10 @@ export default function FalconHeavy({ rocket }) {
     <div className="main">
       <div className="content">
         <section className="feature">
-          <div className="container__image">
-            <Image src={falconHeavy2} />
+          <div className="container__image falconHeavy">
+            {/* <Image src={falconHeavy2} 
+            placeholder="blur"
+            /> */}
             <div className="feature__heading">
             <h1>{rocket.name}</h1>
             <h2>The world's most powerful rocket</h2>
@@ -35,7 +37,7 @@ export default function FalconHeavy({ rocket }) {
               <span>First flight:</span>
               <span>{rocket.first_flight}</span>
             </div>
-            <div className="row">
+            <div className="row description">
               <span>{rocket.description}</span>
             </div>
           </div>

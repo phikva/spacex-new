@@ -1,9 +1,10 @@
 
 
 header {
-   height: 100px;
+   height: 60px;
    width: 100%;
    position: fixed;
+   top: 0;
    background-color: rgb(255, 255, 255);
    z-index: 999;
 }
@@ -27,18 +28,32 @@ header {
    right: 0;
    left: 85%;
    top: 1.7em;
+   
 }
 .menu-show {
-   background-color: black;
+//   background-image: url(../images/stars.jpg);
+background-color: black;
    color: white;
    height: 100vh;
    width: 100vw;
    position: absolute;
+   
+   .container__logo {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+   }
    ul {
       display: flex;
       flex-flow: column wrap;
+      position: relative;
+      bottom: 0;
+      top: 50%;
+     
       li {
          padding: .5em;
+       
          a {
             font-size: 1.5rem;
          }

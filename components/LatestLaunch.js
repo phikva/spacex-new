@@ -29,7 +29,7 @@ function LatestLaunch() {
           <div className='player-wrapper'>
           <ReactPlayer url={video} 
           width="100%"
-          height="auto"
+          height="250px"
           controls="true"
           />
           </div>

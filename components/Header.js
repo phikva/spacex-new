@@ -65,7 +65,13 @@ export default function Header() {
               </li>
            
             </ul>
+            <div className="container__logo">
+          <Image src={Logo}
+          width="200"
+          />
+        </div>
             </div>
+            
               )} 
           </div>
 

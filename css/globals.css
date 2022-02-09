@@ -1,28 +1,29 @@
 @import url("https://use.typekit.net/buy8flg.css");
 h1 {
-  font-size: 3.157rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.369rem;
+  font-size: 1.7rem;
   font-weight: 200;
 }
 
 h3 {
-  font-size: 1.777rem;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 
 h4 {
-  font-size: 1.333rem;
+  font-size: 1.3rem;
   font-weight: 200;
 }
 
 header {
-  height: 100px;
+  height: 60px;
   width: 100%;
   position: fixed;
+  top: 0;
   background-color: white;
   z-index: 999;
 }
@@ -67,6 +68,13 @@ header {
   position: absolute;
 }
 
+.menu-show .container__logo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
 .menu-show ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,6 +83,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  position: relative;
+  bottom: 0;
+  top: 50%;
 }
 
 .menu-show ul li {
@@ -92,10 +103,42 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: nimbus-sans, sans-serif;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+button {
+  padding: 1em 2em;
+  font-size: 14px;
+  border: none;
+  width: 150px;
+}
+
+.btn-primary {
+  border: 1px solid white;
+  background: white;
+  color: black;
+}
+
+.btn-secondary {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-family: good-times, sans-serif;
+}
+
+.main {
+  margin-top: 4em;
+}
+
+.main .content {
+  padding-left: .5em;
+  padding-right: .5em;
 }
 
 a {
@@ -103,7 +146,8 @@ a {
   color: inherit;
 }
 
-ul, li {
+ul,
+li {
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
   list-style: none;
@@ -121,8 +165,44 @@ footer {
   bottom: 0;
 }
 
+footer {
+  margin-top: 1em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  background-color: black;
+  color: white;
+}
+
+footer :first-child {
+  text-align: center;
+}
+
+footer .btn {
+  padding: 1em 2em;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+footer .row {
+  padding-bottom: 1em;
+}
+
+footer .row ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .row ul li {
+  padding: .5em;
+}
+
 .container.history .control-arrow {
-  margin-top: .5em !important;
+  margin-top: 0.5em !important;
 }
 
 .carousel .control-next.control-arrow::before {
@@ -201,5 +281,170 @@ td {
 .inner-content {
   padding: 1em 2em;
   width: 100%;
+}
+
+.container__hero.home {
+  height: 100vh;
+}
+
+.container__hero.home .hero__content {
+  height: 100%;
+}
+
+.container__hero.home .hero__content .hero__text {
+  position: absolute;
+  top: 15em;
+  padding: .5em;
+}
+
+.container__hero.home .hero__content .hero__text .text-background {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container__hero.home .hero__content .hero__text .container__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1em;
+}
+
+.container__hero.home .hero__content .hero__text .container__btn .btn-primary {
+  margin-right: 1em;
+}
+
+.container__hero.home .hero__content .header_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container__hero.home .hero__content .header_video video {
+  width: 100% !important;
+  height: auto !important;
+  position: absolute;
+  bottom: 0;
+}
+
+.container__hero.home .hero__content h1, .container__hero.home .hero__content h2 {
+  color: white;
+}
+
+.company-info h3, .upcoming-launch h3, .latest-launch h3 {
+  font-size: 1rem;
+}
+
+.company-info .section-bottom-img {
+  padding-top: 1em;
+}
+
+.company-info .row.summary, .company-info .row.socials {
+  padding-top: 1em;
+  max-width: 650px;
+}
+
+.company-info .row.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.company-info .social-icons .svg-inline--fa {
+  padding-right: .5em;
+}
+
+.upcoming-launch {
+  background-color: black;
+  color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.upcoming-launch .card__content {
+  max-width: 650px;
+  min-height: 200px;
+}
+
+.latest-launch .card__content {
+  max-width: 650px;
+  min-height: 350px;
+}
+
+.feature {
+  margin-top: 2em;
+}
+
+.feature .container__image.falcon9 {
+  background-image: url(../images/falcon9launch.jpg);
+  background-position: center;
+  background-position-y: -1800px;
+  height: 95vh;
+}
+
+.feature .container__image.falcon9 .feature__heading {
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+}
+
+.feature .container__image.falconHeavy {
+  background-image: url(../images/falconHeavybackground.jpg);
+  background-position: center;
+  height: 95vh;
+}
+
+.feature .container__image.falconHeavy .feature__heading {
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+}
+
+.feature .container__image.starship {
+  background-image: url(../images/starshipBackground.jpg);
+  background-position: center;
+  height: 95vh;
+}
+
+.feature .container__image.starship .feature__heading {
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+}
+
+.container__stats {
+  padding: 1em 2em;
+}
+
+.container__stats :first-child {
+  margin-top: 2em;
+}
+
+.container__stats :nth-child(1), .container__stats :nth-child(2) {
+  font-size: 18px;
+}
+
+.container__stats .row.description {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.container__stats .row.description span {
+  font-size: 16px !important;
+}
+
+.overview .inner-content h2, .overview .inner-content h3 {
+  text-align: left !important;
 }
 /*# sourceMappingURL=globals.css.map */

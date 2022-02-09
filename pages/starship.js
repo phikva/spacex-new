@@ -12,8 +12,10 @@ export default function Starship({ rocket }) {
     <div className="main">
       <div className="content">
         <section className="feature">
-          <div className="container__image">
-            <Image src={starship} />
+          <div className="container__image starship">
+            {/* <Image src={starship} 
+            placeholder="blur"
+            /> */}
             <div className="feature__heading">
             <h1>{rocket.name}</h1>
             <h2>world’s most powerful launch vehicle</h2>
@@ -35,7 +37,7 @@ export default function Starship({ rocket }) {
               <span>First flight:</span>
               <span>{rocket.first_flight}</span>
             </div>
-            <div className="row">
+            <div className="row description">
               <span>{rocket.description}</span>
             </div>
           </div>

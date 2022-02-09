@@ -12,8 +12,10 @@ export default function Falcon9({ rocket }) {
     <div className="main">
       <div className="content">
         <section className="feature">
-          <div className="container__image">
-            <Image src={falcon9launch} />
+          <div className="container__image falcon9">
+            {/* <Image src={falcon9launch} 
+            placeholder="blur"
+            /> */}
             <div className="feature__heading">
             <h1>{rocket.name}</h1>
             <h2>First orbital class rocket capable of reflight</h2>
@@ -35,7 +37,7 @@ export default function Falcon9({ rocket }) {
               <span>First flight:</span>
               <span>{rocket.first_flight}</span>
             </div>
-            <div className="row">
+            <div className="row description">
               <span>{rocket.description}</span>
             </div>
           </div>
