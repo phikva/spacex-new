@@ -243,14 +243,20 @@ td {
 .upcoming-launch {
   background-color: black;
   color: white;
-  padding-top: 2em;
-  padding-bottom: 2em;
+ .content {
+  padding-top: 4em;
+  padding-bottom: 4em;
+ }
   .card__content {
     max-width: 650px;
     min-height: 200px;
   }
 }
 .latest-launch {
+  .content {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
   .card__content {
     max-width: 650px;
     min-height: 350px;
