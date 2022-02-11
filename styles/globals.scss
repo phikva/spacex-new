@@ -267,16 +267,20 @@ td {
 .feature {
   margin-top: 2em;
 
-  .container__image.falcon9 {
+  .background.falcon9 {
     background-image: url(../images/falcon9launch.jpg);
     background-position: center;
     background-position-y: -1800px ;
     height: 95vh;
-   .feature__heading {
-    padding: 1em 2em;
-     position: absolute;
-     top: 50%;
-   }
+ 
+  }
+
+  .falcon9 {
+    .feature__heading {
+      padding: 1em 2em;
+       position: absolute;
+       top: 50%;
+     }
   }
   .container__image.falconHeavy {
     background-image: url(../images/falconHeavybackground.jpg);

@@ -394,14 +394,14 @@ td {
   margin-top: 2em;
 }
 
-.feature .container__image.falcon9 {
+.feature .background.falcon9 {
   background-image: url(../images/falcon9launch.jpg);
   background-position: center;
   background-position-y: -1800px;
   height: 95vh;
 }
 
-.feature .container__image.falcon9 .feature__heading {
+.feature .falcon9 .feature__heading {
   padding: 1em 2em;
   position: absolute;
   top: 50%;
