@@ -407,25 +407,25 @@ td {
   top: 50%;
 }
 
-.feature .container__image.falconHeavy {
+.feature .background.falconHeavy {
   background-image: url(../images/falconHeavybackground.jpg);
   background-position: center;
   height: 95vh;
 }
 
-.feature .container__image.falconHeavy .feature__heading {
+.feature .falconHeavy .feature__heading {
   padding: 1em 2em;
   position: absolute;
   top: 50%;
 }
 
-.feature .container__image.starship {
+.feature .background.starship {
   background-image: url(../images/starshipBackground.jpg);
   background-position: center;
   height: 95vh;
 }
 
-.feature .container__image.starship .feature__heading {
+.feature .starship .feature__heading {
   padding: 1em 2em;
   position: absolute;
   top: 50%;

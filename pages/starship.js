@@ -2,6 +2,65 @@ import Image from "next/image";
 import starship from "../images/starship-min_ccexpress-min.jpeg";
 import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { motion } from "framer-motion";
+//Animate
+
+//Hero
+const containerHero = {
+  show: {
+    transition: {
+      staggerChildren: 1,
+    },
+  },
+};
+
+const itemHero = {
+  hidden: {
+    opacity: 0,
+    y: 200,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
+const itemHeroImg = {
+  hidden: {
+    opacity: 0,
+    scale: 0.2,
+    y: 200,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 1,
+    y: -200,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
 
 export default function Starship({ rocket }) {
   console.log(rocket);
@@ -10,39 +69,125 @@ export default function Starship({ rocket }) {
 
   return (
     <div className="main">
+       <motion.div
+        className="content"
+        variants={containerHero}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
       <div className="content">
         <section className="feature">
           <div className="container__image starship">
-            {/* <Image src={starship} 
-            placeholder="blur"
-            /> */}
+          <motion.div variants={itemHeroImg}>
+          <div className="background starship"></div>
+          </motion.div>
+          
             <div className="feature__heading">
+            <motion.div variants={itemHero}>
             <h1>{rocket.name}</h1>
+            </motion.div>
+            <motion.div variants={itemHero}>
             <h2>world’s most powerful launch vehicle</h2>
+            </motion.div>
             </div>
            
           </div>
         </section>
         <section className="stats">
           <div className="container__stats">
+          <motion.div
+              variants={itemHero}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.6,
+                },
+              }}
+              exit="exit"
+            >
             <div className="row">
-              <span>Cost per launch:</span>
-              <span>${rocket.cost_per_launch.toLocaleString()}</span>
+              <span> <h3>Cost per launch:</h3>
+              <h3>  ${rocket.cost_per_launch.toLocaleString()}</h3></span>
             </div>
+            </motion.div>
+            <motion.div
+              variants={itemHero}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.6,
+                },
+              }}
+              exit="exit"
+            >
             <div className="row">
-              <span>Country:</span>
-              <span>{rocket.country}</span>
+              <span> <h3>Country:</h3>
+              <h3>{rocket.country}</h3></span>
             </div>
+            </motion.div>
+            <motion.div
+              variants={itemHero}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.6,
+                },
+              }}
+              exit="exit"
+            >
             <div className="row">
-              <span>First flight:</span>
-              <span>{rocket.first_flight}</span>
+              <span><h3>First flight:</h3>
+              <h3>{rocket.first_flight}</h3></span>
             </div>
+            </motion.div>
+            <motion.div
+              variants={itemHero}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.6,
+                },
+              }}
+              exit="exit"
+            >
             <div className="row description">
               <span>{rocket.description}</span>
             </div>
+            </motion.div>
           </div>
         </section>
         <section className="overview">
+        <motion.div
+            variants={itemHero}
+            initial="hidden"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.2,
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1.6,
+              },
+            }}
+            exit="exit"
+          >
           <Carousel
             styles={styles}
             showThumbs={false}
@@ -53,8 +198,37 @@ export default function Starship({ rocket }) {
           >
             <div className="section-inner">
               <div className="inner-content">
+              <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <h2>{rocket.name}</h2>
                 <h3>Overview</h3>
+                </motion.div>
+                <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <table>
                   <tbody>
                     <tr>
@@ -107,12 +281,42 @@ export default function Starship({ rocket }) {
                     </tr>
                   </tbody>
                 </table>
+                </motion.div>
               </div>
             </div>
             <div className="section-inner">
               <div className="inner-content">
+              <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <h2>{rocket.name}</h2>
                 <h3>First stage</h3>
+                </motion.div>
+                <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <table>
                   <tbody>
                     <tr>
@@ -138,12 +342,42 @@ export default function Starship({ rocket }) {
                     </tr>
                   </tbody>
                 </table>
+                </motion.div>
               </div>
             </div>
             <div className="section-inner">
               <div className="inner-content">
+              <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <h2>{rocket.name}</h2>
                 <h3>Second stage</h3>
+                </motion.div>
+                <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
                 <table>
                   <tbody>
                     <tr>
@@ -160,10 +394,26 @@ export default function Starship({ rocket }) {
                     </tr>
                   </tbody>
                 </table>
+                </motion.div>
               </div>
             </div>
           </Carousel>
+          </motion.div>
         </section>
+        <motion.div
+                    variants={itemHero}
+                    initial="hidden"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.2,
+                        ease: [0.6, 0.01, -0.05, 0.95],
+                        duration: 1.6,
+                      },
+                    }}
+                    exit="exit"
+                  >
         <section className="gallery">
           <Carousel
             styles={styles}
@@ -181,8 +431,9 @@ export default function Starship({ rocket }) {
           
           </Carousel>
         </section>
-      
+        </motion.div>
       </div>
+      </motion.div>
     </div>
   );
 }

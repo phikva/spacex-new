@@ -282,29 +282,34 @@ td {
        top: 50%;
      }
   }
-  .container__image.falconHeavy {
+  .background.falconHeavy {
     background-image: url(../images/falconHeavybackground.jpg);
     background-position: center;
     // background-position-y: -1800px ;
     height: 95vh;
-   .feature__heading {
-    padding: 1em 2em;
-     position: absolute;
-     top: 50%;
-   }
+  
   }
-  .container__image.starship {
+  .falconHeavy {
+    .feature__heading {
+      padding: 1em 2em;
+       position: absolute;
+       top: 50%;
+     }
+  }
+  .background.starship {
     background-image: url(../images/starshipBackground.jpg);
     background-position: center;
     // background-position-y: -1800px ;
     height: 95vh;
-   .feature__heading {
-    padding: 1em 2em;
-     position: absolute;
-     top: 50%;
-   }
-  }
   
+  }
+  .starship {
+    .feature__heading {
+      padding: 1em 2em;
+       position: absolute;
+       top: 50%;
+     }
+  }
 }
 .container__stats {
   padding: 1em 2em;
