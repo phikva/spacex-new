@@ -61,6 +61,7 @@ function NextLaunch() {
     exit="exit"
     >
        <motion.div 
+       className="section__title-container"
        variants={itemUpcoming} 
        initial="hidden"
        whileInView={{

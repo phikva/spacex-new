@@ -17,6 +17,19 @@ header {
    display: flex;
    justify-content: center;
    padding-top: .25em;
+   position: absolute;
+   left: 0;
+   top: 0 ;
+
+}
+.container__logo-mobile {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 25%;
+   right: 0;
+   width: 50%;
+
 }
 .nav__content{
    display: flex;
@@ -28,28 +41,27 @@ header {
    right: 0;
    left: 85%;
    top: 1.7em;
+   z-index: 999;
    
 }
-
+.menu-desktop {
+   display: none;
+}
 .menu-show {
+   z-index: 999;
 background-color: black;
-   color: white;
+   color: black;
    height: 100vh;
    width: 100vw;
    position: absolute;
-
-   .container__logo {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: white;
-   }
    ul {
+      z-index: 999;
       display: flex;
       flex-flow: column wrap;
       position: relative;
       bottom: 0;
-      top: 50%;
+      top: 60%;
+      padding-left: 1em;
      
       li {
          padding: .5em;
@@ -59,4 +71,44 @@ background-color: black;
          }
       }
    }
+   .container__logo {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+   }
 }
+
+@media only screen and (min-width: 1000px) {
+   .hamburger {
+      display: none;
+   }
+  .menu-desktop {
+     all: unset;
+     width: 100%;
+     ul {
+        position: relative;
+        z-index: 999;
+        display: flex;
+        float: right;
+        width: 40%;
+        margin-top: 1.5em;
+        li {
+           padding-right: .75em;
+           font-size: 1.1rem;
+         //   font-weight: 600;
+           color: rgba(0, 0, 0, 0.822);
+           text-transform: uppercase;
+        }
+       
+     }
+  
+  }
+  .container__logo {
+   position: relative;
+   bottom: 0;
+   margin-top: 3em;
+}
+
+}
+ 

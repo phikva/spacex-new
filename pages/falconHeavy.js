@@ -111,8 +111,8 @@ export default function FalconHeavy({ rocket }) {
               exit="exit"
             >
             <div className="row">
-              <span> <h3>Cost per launch:</h3>
-            <h3>${rocket.cost_per_launch.toLocaleString()}</h3></span>
+              <span> <h3>Cost per launch:
+          ${rocket.cost_per_launch.toLocaleString()}</h3></span>
             </div>
             </motion.div>
             <motion.div
@@ -130,8 +130,8 @@ export default function FalconHeavy({ rocket }) {
               exit="exit"
             >
             <div className="row">
-              <span> <h3>Country:</h3>
-              <h3>{rocket.country}</h3></span>
+              <span> <h3>Country:
+              {rocket.country}</h3></span>
             </div>
             </motion.div>
             <motion.div
@@ -149,8 +149,8 @@ export default function FalconHeavy({ rocket }) {
               exit="exit"
             >
             <div className="row">
-              <span><h3>First flight:</h3>
-              <h3> {rocket.first_flight}</h3></span>
+              <span><h3>First flight:
+              {rocket.first_flight}</h3></span>
             </div>
             </motion.div>
             <motion.div
@@ -222,7 +222,7 @@ export default function FalconHeavy({ rocket }) {
                       opacity: 1,
                       y: 0,
                       transition: {
-                        delay: 0.2,
+                        delay: 0.4,
                         ease: [0.6, 0.01, -0.05, 0.95],
                         duration: 1.6,
                       },
@@ -310,7 +310,7 @@ export default function FalconHeavy({ rocket }) {
                       opacity: 1,
                       y: 0,
                       transition: {
-                        delay: 0.2,
+                        delay: 0.4,
                         ease: [0.6, 0.01, -0.05, 0.95],
                         duration: 1.6,
                       },
@@ -370,7 +370,7 @@ export default function FalconHeavy({ rocket }) {
                       opacity: 1,
                       y: 0,
                       transition: {
-                        delay: 0.2,
+                        delay: 0.4,
                         ease: [0.6, 0.01, -0.05, 0.95],
                         duration: 1.6,
                       },
@@ -399,20 +399,7 @@ export default function FalconHeavy({ rocket }) {
           </Carousel>
           </motion.div>
         </section>
-        <motion.div
-                    variants={itemHero}
-                    initial="hidden"
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        delay: 0.2,
-                        ease: [0.6, 0.01, -0.05, 0.95],
-                        duration: 1.6,
-                      },
-                    }}
-                    exit="exit"
-                  >
+       
         <section className="gallery">
           <Carousel
             styles={styles}
@@ -423,14 +410,18 @@ export default function FalconHeavy({ rocket }) {
             infiniteLoop={true}
           >
             {rocket.flickr_images.map((img) => 
+             <div className="section-inner">
+             <div className="inner-content">
             <div key={imageCarouselKey}>
               <img src= {img} />
+              </div>
+              </div>
             </div>
             )}
           
           </Carousel>
         </section>
-        </motion.div>
+      
       </div>
       </motion.div>
     </div>

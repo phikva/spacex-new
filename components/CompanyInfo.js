@@ -106,6 +106,7 @@ function CompanyInfo() {
         </div>
       </motion.div>
       <motion.div
+      className="row name container"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -119,7 +120,8 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-      <div className="row">
+        
+      <div className="row name">
         <span>
           <h3>Name: {data.name}</h3>
           <h3>Ceo: {data.ceo}</h3>
@@ -127,6 +129,7 @@ function CompanyInfo() {
       </div>
       </motion.div>
       <motion.div
+        className="row info container"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -140,7 +143,7 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-      <div className="row">
+      <div className="row info">
         <span>
           <h3>Employees: {data.employees}</h3>
           <h3>Founded: {data.founded}</h3>
@@ -149,6 +152,7 @@ function CompanyInfo() {
       </div>
       </motion.div>
       <motion.div
+        className="row summary container"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -167,6 +171,7 @@ function CompanyInfo() {
           <p>{data.summary}</p>
         </span>
       </div>
+      
       </motion.div>
       <div className="row socials">
       <motion.div

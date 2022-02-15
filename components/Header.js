@@ -61,6 +61,31 @@ const itemLogo = {
     },
   },
 };
+const itemLogoDesktop = {
+  hidden: {
+    opacity: 0,
+    x: -500,
+    y: -150,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    y: -50,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -500,
+    y: -150,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
 const itemLogoMenu = {
   hidden: {
     opacity: 0,
@@ -107,6 +132,7 @@ export default function Header() {
           exit="exit"
         >
           <nav>
+         
             <motion.div variants={itemHeader}>
               <div className="nav__content">
                 <FontAwesomeIcon
@@ -115,7 +141,7 @@ export default function Header() {
                   size="2x"
                   onClick={() => setShowMenu(!showMenu)}
                 />
-
+                
                 {showMenu && (
                   
                   <div className="menu-show">
@@ -127,6 +153,7 @@ export default function Header() {
                     </div>
 
                     <ul>
+                    <motion.div variants={itemHeader}>
                       <li>
                         <Link href="/">Home</Link>
                       </li>
@@ -150,26 +177,72 @@ export default function Header() {
                       <li>
                         <Link href="/contact">Contact</Link>
                       </li>
+                      </motion.div>
                     </ul>
+                    
 
                     <motion.div variants={itemLogoMenu}>
                       <div className="container__logo">
+                    
                         <Image src={Logo} width="200" />
+                 
                       </div>
                     </motion.div>
                   </div>
                   
                 )}
-               
+                 <motion.div variants={itemLogoMenu}>
+                      <div className="container__logo-mobile">
+                    
+                        <Image src={Logo} width="200" />
+                 
+                      </div>
+                    </motion.div>
+                <div className="menu-desktop">
+                 
+
+                 <ul>
+                 {/* <motion.div variants={itemHeader}> */}
+                   <li>
+                     <Link href="/">Home</Link>
+                   </li>
+
+                   <li>
+                     <Link href="/falcon9">Falcon 9</Link>
+                   </li>
+
+                   <li>
+                     <Link href="/falconHeavy">Falcon Heavy</Link>
+                   </li>
+
+                   <li>
+                     <Link href="/starship">Starship</Link>
+                   </li>
+
+                   <li>
+                     <Link href="/history">History</Link>
+                   </li>
+
+                   <li>
+                     <Link href="/contact">Contact</Link>
+                   </li>
+                   {/* </motion.div> */}
+                 </ul>
+                 <motion.div variants={itemLogoDesktop}>
+                <div className="container__logo">
+     
+              <Image src={Logo} width="200" />
+        
+            </div>
+          </motion.div>
+                
+               </div>
+              
               </div>
               
             </motion.div>
           </nav>
-          <motion.div variants={itemLogo}>
-            <div className="container__logo">
-              <Image src={Logo} width="200" />
-            </div>
-          </motion.div>
+       
         </motion.div>
       </header>
     </>
