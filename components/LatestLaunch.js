@@ -15,7 +15,7 @@ const fetcher = async () => {
 const containerLatest = {
   show: {
     transition: {
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };
