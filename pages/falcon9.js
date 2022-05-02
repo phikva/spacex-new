@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const containerHero = {
   show: {
     transition: {
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };
