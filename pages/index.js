@@ -78,7 +78,7 @@ export default function Home() {
               exit="exit"
             >
               <motion.div variants={itemHero}>
-                <h1 className="pb-5">ADVANCING THE FUTURE</h1>
+                <h1 className="">ADVANCING THE FUTURE</h1>
                 <h2 className="pb-5 xl:w-1/2">
                   SPACE X DESIGNS, MANUFACTURES AND LAUNCHES ADVANCED ROCKETS
                   AND SPACECRAFTs

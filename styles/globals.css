@@ -55,4 +55,58 @@ section {
 .hero {
  background-image: url(../images/pexels-spacex-23769-min.jpg)
 }
+.feature {
+    height:100vh;
+}
+.background.falcon9 {
+    background-image: url(../images/falcon9launch-min_ccexpress-min.jpeg);
+    background-position:center;
+    background-size:cover;
+    height:100vh;
+}
+
+.background.falconHeavy {
+    background-image: url(../images/falconHeavybackground.jpg);
+    background-position: center;
+    background-size:cover;
+    height:100vh;
+}
+.background.starship {
+    background-image: url(../images/starshipBackground.jpg);
+    background-position: center;
+    background-size:cover;
+    height:100vh;
+}
+
+.feature__heading {
+@apply absolute top-40 xs:p-5 text-center xs:w-full md:text-left xl:w-1/2 xl:pl-60 xl:pt-60;
+}
+}
+.container__stats {
+    @apply xs:p-5 xs:pt-32 text-center
+}
+.overview {
+    @apply xs:h-fit pb-5
+}
+table {
+    @apply w-full
+}
+tbody {
+    @apply text-left
+}
+td {
+    @apply text-right border-b-2 border-border py-5
+}
+td:first-child {
+    @apply text-left
+}
+.inner-content {
+    @apply h-8xl grid content-center
+}
+
+.section-inner {
+@apply px-5
+}
+.control-arrow {
+    @apply h-1/3
 }

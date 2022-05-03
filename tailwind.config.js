@@ -14,13 +14,18 @@ module.exports = {
     colors: {
       'black': '#000',
       'white': '#fff',
+      "border": "#737373"
     },
     extend: {
       fontFamily: {
         "heading": ['good-times', 'sans-serif'],
         "text": ['nimbus-sans', 'serif'],
       },
-    
+      spacing: {
+        '8xl': '600px',
+        '9xl': '128rem',
+      },
+     
     },
    
   },
