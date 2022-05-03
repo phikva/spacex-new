@@ -53,13 +53,14 @@ function LatestLaunch() {
   const video = data.links.webcast;
   return (
 
-    <motion.div className="content"
+    <motion.div className="flex flex-col py-32 px-5 text-center md:text-left md:grid grid-cols-2 xl:px-30 "
     variants={containerLatest}
     initial="hidden"
     animate="show"
     exit="exit"
     >
        <motion.div
+       className="col-start-2 row-span-2 text-center self-center"
         variants={itemLatest}
         initial="hidden"
         whileInView={{
@@ -73,11 +74,14 @@ function LatestLaunch() {
         }}
         exit="exit"
       >
-      <div className="section__title">
+      <div className="">
         <h2>Latest launch</h2>
       </div>
+      <div className="title"> 
+        <h3>Name: {data.name}</h3>
+        </div>
       </motion.div>
-      <div className="row">
+      <div className="col-start-1">
         <div className="card__content">
         <motion.div
         variants={itemLatest}
@@ -93,11 +97,10 @@ function LatestLaunch() {
         }}
         exit="exit"
       >
-        <div className="title"> 
-        <h3>Name: {data.name}</h3>
-        </div>
+    
         </motion.div>
         <motion.div
+        className=""
         variants={itemLatest}
         initial="hidden"
         whileInView={{

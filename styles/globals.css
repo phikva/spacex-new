@@ -1,0 +1,58 @@
+@import url("https://use.typekit.net/buy8flg.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+body {
+    @apply font-text;
+   font-size: 1rem;
+   background: black;
+   color: white;
+}
+h1,h2,h3,h4 {
+    @apply font-heading;
+    font-weight: 400;
+}
+h1 {
+    @apply xs:text-2xl md:text-3xl xl:text-4xl font-bold;
+}
+h2 {
+    @apply xs:text-xl md:text-3xl xl:text-3xl font-light;
+}
+h3 {
+    @apply xs:text-sm md:text-xl xl:text-xl font-light;
+    font-weight:  100;
+}
+p {
+    @apply md:text-xl font-thin;
+}
+nav li {
+    @apply xs:flex content-center justify-center pb-2 md:pt-3 pl-4;
+}
+}
+
+@layer components {
+    .logo {
+        @apply  text-white font-bold xs:text-3xl md:text-4xl;
+    }
+.btn-primary {
+    @apply border-2 py-3 px-10
+}
+.btn-secondary {
+    @apply border-2 py-3 px-10
+}
+section {
+   
+}
+.social-icons {
+    @apply pb-1
+}
+.social-icons svg {
+    @apply mr-2
+}
+.hero {
+ background-image: url(../images/pexels-spacex-23769-min.jpg)
+}
+}

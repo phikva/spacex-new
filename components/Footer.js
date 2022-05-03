@@ -34,14 +34,16 @@ const itemFooter = {
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="p-5">
       <motion.div
+      className="text-center pb-5 md:grid grid-cols-2 "
         variants={containerFooter}
         initial="hidden"
         animate="show"
         exit="exit"
       >
         <motion.div
+        className="xs:pb-5 xs:block text-lg md:text-left md:flex items-end justify-center md:pb-0"
           variants={itemFooter}
           initial="hidden"
           whileInView={{
@@ -55,13 +57,27 @@ export default function Footer() {
           }}
           exit="exit"
         >
-          <div className="row">
-            <button className="btn">
+          <div className="md:pr-5">
+              <Link href="/">Home</Link>
+          </div>
+          <div className="md:pr-5">
+              <Link href="/falcon9">Falcon 9</Link>
+          </div>
+          <div className="md:pr-5">
+              <Link href="/falconHeavy">Falcon Heavy</Link>
+          </div>
+          <div className="md:pr-5">
+              <Link href="/starship">Starship</Link>
+          </div>
+          <div className="md:pr-5">
+              <Link href="/history">History</Link>
+          </div>
+          <div className="md:pr-5">
               <Link href="/contact">Contact</Link>
-            </button>
           </div>
         </motion.div>
         <motion.div
+        
           variants={itemFooter}
           initial="hidden"
           whileInView={{
@@ -76,27 +92,27 @@ export default function Footer() {
           exit="exit"
         >
           <div className="row">
-            <ul>
-              <li>
-                <a href="https://twitter.com/elonmusk" target="_blank">
+            <ul className="xs:pb-5 xs:block text-lg md:text-left md:flex items-end justify-center md:pb-0">
+              <li className="md:pr-5">
+                <a href="https://twitter.com/elonmusk" target="_blank" rel="noreferrer">
                   {" "}
                   Twitter{" "}
                 </a>
               </li>
-              <li>
-                <a href="https://www.youtube.com/c/SpaceX" target="_blank">
+              <li className="md:pr-5">
+                <a href="https://www.youtube.com/c/SpaceX" target="_blank" rel="noreferrer">
                   {" "}
                   Youtube{" "}
                 </a>
               </li>
-              <li>
-                <a href="https://instagram.com/spaceX" target="_blank">
+              <li className="md:pr-5">
+                <a href="https://instagram.com/spaceX" target="_blank" rel="noreferrer">
                   {" "}
                   Instagram{" "}
                 </a>
               </li>
-              <li>
-                <a href="https://flickr.com/photos/spacex" target="_blank">
+              <li className="md:pr-5">
+                <a href="https://flickr.com/photos/spacex" target="_blank" rel="noreferrer">
                   {" "}
                   Flickr
                 </a>

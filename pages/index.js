@@ -4,6 +4,8 @@ import CompanyInfo from "../components/CompanyInfo";
 import NextLaunch from "../components/NextLaunch";
 import LatestLaunch from "../components/LatestLaunch";
 import ReactPlayer from "react-player";
+import Image from "next/dist/client/image";
+import stars from "../images/purpleBackground.jpg";
 
 //Animate
 
@@ -25,9 +27,9 @@ const itemHero = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [.6, .01, -.05, .95],
-      duration: 1.6
-    }
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
   },
   exit: {
     opacity: 0,
@@ -35,8 +37,8 @@ const itemHero = {
     transition: {
       ease: "easeInOut",
       duration: 0.8,
-    }
-  }
+    },
+  },
 };
 const itemHeroButtons = {
   hidden: {
@@ -47,9 +49,9 @@ const itemHeroButtons = {
     opacity: 1,
     x: 0,
     transition: {
-      ease: [.6, .01, -.05, .95],
-      duration: 1.6
-    }
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
   },
   exit: {
     opacity: 0,
@@ -57,68 +59,51 @@ const itemHeroButtons = {
     transition: {
       ease: "easeInOut",
       duration: 0.8,
-    }
-  }
+    },
+  },
 };
 export default function Home() {
   return (
     <div className="main">
-      <div className="container__hero home">
-        <div className="hero__content">
-          <ReactPlayer
-            className="header_video"
-            playing="true"
-            loop="true"
-            width="100%"
-            height="100%"
-            muted="true"
-            url={[
-              "https://firebasestorage.googleapis.com/v0/b/spacex-35c8c.appspot.com/o/headerBackground.mp4?alt=media&token=81d265d3-4ed7-4fde-81c5-5dd8e3570e01",
-            ]}
-          />
+      
+        <div className="hero bg-cover h-screen bg-center">
+        
 
-          <div className="hero__text">
-            <motion.div className="text-background" 
-            variants={containerHero}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            > 
-            <motion.div variants={itemHero} >
-              <h1>ADVANCING THE FUTURE</h1>
-              </motion.div>
-              <motion.div variants={itemHero} >
-              <h2>
-                SPACE X DESIGNS, MANUFACTURES AND LAUNCHES ADVANCED ROCKETS AND
-                SPACECRAFTs
-              </h2>
+          <div className="absolute bottom-1/3 text-center xs:px-5 xl:text-left xl:px-60">
+            <motion.div
+              className="text-background"
+              variants={containerHero}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+            >
+              <motion.div variants={itemHero}>
+                <h1 className="pb-5">ADVANCING THE FUTURE</h1>
+                <h2 className="pb-5 xl:w-1/2">
+                  SPACE X DESIGNS, MANUFACTURES AND LAUNCHES ADVANCED ROCKETS
+                  AND SPACECRAFTs
+                </h2>
               </motion.div>
 
-             
-              <div className="container__btn">
-              <motion.div variants={itemHeroButtons} >
-                <a href="#companyInfo" >
-                  <button className="btn-primary">Read More</button>
-                </a>
-                </motion.div>
-                <motion.div variants={itemHeroButtons} >
-                <button className="btn-secondary">SpaceX History</button>
+              <div className="flex justify-center xl:justify-start">
+                <motion.div variants={itemHeroButtons}>
+                  <a href="#companyInfo">
+                    <button className="btn-primary ">Read More</button>
+                  </a>
                 </motion.div>
               </div>
-              
-
             </motion.div>
           </div>
-        </div>
+       
       </div>
 
-      <section id="companyInfo" className="container company-info">
+      <section id="companyInfo" className="">
         <CompanyInfo />
       </section>
-      <section className="container upcoming-launch">
+      <section className="">
         <NextLaunch />
       </section>
-      <section className="container latest-launch">
+      <section className="">
         <LatestLaunch />
       </section>
     </div>

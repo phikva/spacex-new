@@ -81,13 +81,14 @@ function CompanyInfo() {
 
   return (
     <motion.div
-      className="content"
+      className="md:grid grid-cols-2 text-center md:text-left"
       variants={containerCompany}
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <motion.div
+        className="xs:pt-32 xs:p-5 md:col-start-1 col-span-2 xl:px-60 xl:pt-60 xl:pb-0"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -106,7 +107,7 @@ function CompanyInfo() {
         </div>
       </motion.div>
       <motion.div
-      className="row name container"
+        className="px-5 md:col-start-1 row-start-2 self-center xl:pl-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -120,16 +121,15 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-        
-      <div className="row name">
-        <span>
-          <h3>Name: {data.name}</h3>
-          <h3>Ceo: {data.ceo}</h3>
-        </span>
-      </div>
+        <div className="row name">
+          <span>
+            <h3>Name: {data.name}</h3>
+            <h3>Ceo: {data.ceo}</h3>
+          </span>
+        </div>
       </motion.div>
       <motion.div
-        className="row info container"
+        className="px-5 md:col-start-1 row-start-3 xl:pl-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -143,16 +143,16 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-      <div className="row info">
-        <span>
-          <h3>Employees: {data.employees}</h3>
-          <h3>Founded: {data.founded}</h3>
-          <h3>Valuation: ${data.valuation.toLocaleString()}</h3>
-        </span>
-      </div>
+        <div className="row info">
+          <span>
+            <h3>Employees: {data.employees}</h3>
+            <h3>Founded: {data.founded}</h3>
+            <h3>Valuation: ${data.valuation.toLocaleString()}</h3>
+          </span>
+        </div>
       </motion.div>
       <motion.div
-        className="row summary container"
+        className="px-5 py-5 xl:pr-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -166,105 +166,117 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-      <div className="row summary">
-        <span>
-          <p>{data.summary}</p>
-        </span>
-      </div>
-      
+        <div className="row summary">
+          <span>
+            <p>{data.summary}</p>
+          </span>
+        </div>
       </motion.div>
-      <div className="row socials">
-      <motion.div
-        variants={itemCompanyIcons}
-        initial="hidden"
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            delay: 1,
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1.6,
-          },
-        }}
-        exit="exit"
-      >
-        <div className="social-icons">
-          <a href="https://twitter.com/elonmusk" target="_blank">
-            <FontAwesomeIcon size="2x" icon={faTwitter} Link />
-            {data.links.elon_twitter}
-          </a>
-        </div>
+      <div className="px-5 py-5 lg:grid grid-cols-2 xl:pr-60">
+        <motion.div
+          variants={itemCompanyIcons}
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 1,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.6,
+            },
+          }}
+          exit="exit"
+        >
+          <div className="social-icons">
+            <a
+              href="https://twitter.com/elonmusk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon size="2x" icon={faTwitter} Link />
+              {data.links.elon_twitter}
+            </a>
+          </div>
         </motion.div>
         <motion.div
-        variants={itemCompanyIcons}
-        initial="hidden"
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            delay: 1.2,
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1.6,
-          },
-        }}
-        exit="exit"
-      >
-        <div className="social-icons">
-          <a href="https://twitter.com/SpaceX" target="_blank">
-            <FontAwesomeIcon size="2x" icon={faTwitter} Link />
-            {data.links.twitter}
-          </a>
-        </div>
+          variants={itemCompanyIcons}
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 1.2,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.6,
+            },
+          }}
+          exit="exit"
+        >
+          <div className="social-icons">
+            <a
+              href="https://twitter.com/SpaceX"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon size="2x" icon={faTwitter} Link />
+              {data.links.twitter}
+            </a>
+          </div>
         </motion.div>
         <motion.div
-        variants={itemCompanyIcons}
-        initial="hidden"
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            delay: 1.4,
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1.6,
-          },
-        }}
-        exit="exit"
-      >
-        <div className="social-icons">
-          <a href="https://flickr.com/photos/SpaceX" target="_blank">
-            <FontAwesomeIcon size="2x" icon={faFlickr} Link />
-            {data.links.flickr}
-          </a>
-        </div>
+          variants={itemCompanyIcons}
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 1.4,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.6,
+            },
+          }}
+          exit="exit"
+        >
+          <div className="social-icons">
+            <a
+              href="https://flickr.com/photos/SpaceX"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon size="2x" icon={faFlickr} Link />
+              {data.links.flickr}
+            </a>
+          </div>
         </motion.div>
         <motion.div
-        variants={itemCompanyIcons}
-        initial="hidden"
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            delay: 1.6,
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1.6,
-          },
-        }}
-        exit="exit"
-      >
-        <div className="social-icons">
-          <a href="https://spacex.com" target="_blank">
-            <FontAwesomeIcon size="2x" icon={faChrome} Link />
-            {data.links.website}
-          </a>
-        </div>
+          variants={itemCompanyIcons}
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 1.6,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.6,
+            },
+          }}
+          exit="exit"
+        >
+          <div className="social-icons">
+            <a href="https://spacex.com" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon size="2x" icon={faChrome} Link />
+              {data.links.website}
+            </a>
+          </div>
         </motion.div>
       </div>
       <motion.div
+        className="pt-10 md:col-start-1 col-span-2 pt-30 xl:pt-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
           opacity: 1,
-         
+
           y: 0,
           transition: {
             delay: 0.2,
@@ -274,9 +286,13 @@ function CompanyInfo() {
         }}
         exit="exit"
       >
-      <div className="section-bottom-img">
-        <Image alt="spaceX-rocket" src={purpleBackground} placeholder="blur" />
-      </div>
+        <div className="">
+          <Image
+            alt="spaceX-rocket"
+            src={purpleBackground}
+            placeholder="blur"
+          />
+        </div>
       </motion.div>
     </motion.div>
   );
