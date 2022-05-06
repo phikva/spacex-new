@@ -81,14 +81,14 @@ function CompanyInfo() {
 
   return (
     <motion.div
-      className="md:grid grid-cols-2 text-center md:text-left"
+      className="md:grid grid-cols-2 text-center"
       variants={containerCompany}
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <motion.div
-        className="xs:pt-32 xs:p-5 md:col-start-1 col-span-2 xl:px-60 xl:pt-60 xl:pb-0"
+        className="xs:pt-32 xs:p-5 md:col-start-1 md:text-left col-span-2 xl:px-60 xl:pt-60 xl:pb-0"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -107,7 +107,7 @@ function CompanyInfo() {
         </div>
       </motion.div>
       <motion.div
-        className="px-5 md:col-start-1 row-start-2 self-center xl:pl-60"
+        className="px-5 md:col-start-1 md:text-left row-start-2 self-center xl:pl-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -129,7 +129,7 @@ function CompanyInfo() {
         </div>
       </motion.div>
       <motion.div
-        className="px-5 md:col-start-1 row-start-3 xl:pl-60"
+        className="px-5 md:col-start-1 md:text-left row-start-3 xl:pl-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -152,7 +152,7 @@ function CompanyInfo() {
         </div>
       </motion.div>
       <motion.div
-        className="px-5 py-5 xl:pr-60"
+        className="px-5 py-5 md:text-left xl:pr-60"
         variants={itemCompany}
         initial="hidden"
         whileInView={{
@@ -172,7 +172,7 @@ function CompanyInfo() {
           </span>
         </div>
       </motion.div>
-      <div className="px-5 py-5 lg:grid grid-cols-2 xl:pr-60">
+      <div className="px-5 py-5 lg:grid grid-cols-2 md:text-left xl:pr-60">
         <motion.div
           variants={itemCompanyIcons}
           initial="hidden"

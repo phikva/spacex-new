@@ -427,9 +427,9 @@ export default function Falcon9({ rocket }) {
             >
               
               {rocket.flickr_images.map((img) => (
-                <div className="section-inner">
+                <div className="section-inner" key={imageCarouselKey}>
                   <div className="inner-content">
-                <div key={imageCarouselKey}>
+                <div >
                   <img src={img} />
                 </div>
                 </div>
